@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | sample</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 1920px; height: 1080px; background: #0001A2"></canvas>
+    <script src="Build/test.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/test.data",
+        frameworkUrl: "Build/test.framework.js",
+        codeUrl: "Build/test.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Sample Inc.",
+        productName: "sample",
+        productVersion: "1.2",
+      });
+    </script>
+  </body>
+</html>
